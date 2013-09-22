@@ -1,4 +1,5 @@
 Solr Search Builds a Standalone SOLR EAR for use on Application Servers such as JBoss.
 
+
 It also includes the jar and libraries required to run a Data Import on an oracle database.
 
