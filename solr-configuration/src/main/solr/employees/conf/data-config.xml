@@ -1,0 +1,17 @@
+<dataConfig>
+    <dataSource name="jdbc" driver="oracle.jdbc.OracleDriver"
+                url="${solr.db.url}"
+                user="${solr.db.user}" password="${solr.db.password}"/>
+
+    <document>
+        <entity name="employee" pk="ID" query="select * from employee"
+                deltaImportQuery="select * from employee where ID='${dataimporter.delta.ID}'"
+                deltaQuery="select * from employee where lastModified &gt; to_date('${dataimporter.last_index_time}','YYYY-MM-DD HH24:MI:SS')">
+
+            <field column="ID" name="employee.id"/>
+            <field column="FIRSTNAME" name="employee.firstname"/>
+            <field column="LASTNAME" name="employee.lastname"/>
+        </entity>
+    </document>
+
+</dataConfig>

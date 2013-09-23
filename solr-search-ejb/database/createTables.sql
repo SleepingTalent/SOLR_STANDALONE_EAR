@@ -5,6 +5,7 @@ CREATE TABLE employee (
           firstname VARCHAR(100),
           lastname VARCHAR(100),
           dateOfBirth DATE,
+          lastModified DATE,
           PRIMARY KEY (id)
         );
 
@@ -23,6 +24,7 @@ CREATE TABLE address (
   townCity VARCHAR(100),
   postCode VARCHAR(100) NOT NULL,
   primaryAddress BIT,
+  lastModified DATE,
   PRIMARY KEY (id),
   FOREIGN KEY (employee_id)
   REFERENCES employee(id)

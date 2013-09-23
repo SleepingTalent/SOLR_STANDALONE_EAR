@@ -2,3 +2,16 @@ Solr Search Builds a Standalone SOLR EAR for use on Application Servers such as 
 
 It also includes the jar and libraries required to run a Data Import on an oracle database.
 
+
+
+Add the following to JBoss System Properties
+
+solr.solr.home e.g C:/solr-search/solr
+
+solr.data.dir
+
+solr.server.url e.g http://localhost:8080/solr
+
+solr.db.url
+solr.db.password
+solr.db.user
