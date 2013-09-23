@@ -1,29 +1,29 @@
 /*
 
-MIT License
------------
+ MIT License
+ -----------
 
-Copyright (c) 2010-2011, The Dojo Foundation
+ Copyright (c) 2010-2011, The Dojo Foundation
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
 
-*/
+ */
 
 /**
  * @license RequireJS order 1.0.5 Copyright (c) 2010-2011, The Dojo Foundation All Rights Reserved.
@@ -32,7 +32,7 @@ THE SOFTWARE.
  */
 /*jslint nomen: false, plusplus: false, strict: false */
 /*global require: false, define: false, window: false, document: false,
-  setTimeout: false */
+ setTimeout: false */
 
 //Specify that requirejs optimizer should wrap this code in a closure that
 //maps the namespaced requirejs API to non-namespaced local variables.
@@ -51,21 +51,21 @@ THE SOFTWARE.
     //if false, then it will execute in order. Favor that test first for forward
     //compatibility.
     var testScript = typeof document !== "undefined" &&
-                 typeof window !== "undefined" &&
-                 document.createElement("script"),
+            typeof window !== "undefined" &&
+            document.createElement("script"),
 
         supportsInOrderExecution = testScript && (testScript.async ||
-                               ((window.opera &&
-                                 Object.prototype.toString.call(window.opera) === "[object Opera]") ||
-                               //If Firefox 2 does not have to be supported, then
-                               //a better check may be:
-                               //('mozIsLocallyAvailable' in window.navigator)
-                               ("MozAppearance" in document.documentElement.style))),
+            ((window.opera &&
+                Object.prototype.toString.call(window.opera) === "[object Opera]") ||
+                //If Firefox 2 does not have to be supported, then
+                //a better check may be:
+                //('mozIsLocallyAvailable' in window.navigator)
+                ("MozAppearance" in document.documentElement.style))),
 
-        //This test is true for IE browsers, which will load scripts but only
-        //execute them once the script is added to the DOM.
+    //This test is true for IE browsers, which will load scripts but only
+    //execute them once the script is added to the DOM.
         supportsLoadSeparateFromExecute = testScript &&
-                                          testScript.readyState === 'uninitialized',
+            testScript.readyState === 'uninitialized',
 
         readyRegExp = /^(complete|loaded)$/,
         cacheWaiting = [],

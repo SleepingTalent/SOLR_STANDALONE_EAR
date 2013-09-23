@@ -16,99 +16,104 @@ limitations under the License.
 -->
 <div id="query" class="clearfix">
 
-  <div id="form">
+<div id="form">
 
-    <form action="#" method="get">
+<form action="#" method="get">
 
-      <label for="qt">
-        <a rel="help">Request-Handler (qt)</a>
-      </label>
-      <input type="text" id="qt" value="/select" title="Request handler in solrconfig.xml.">
+<label for="qt">
+    <a rel="help">Request-Handler (qt)</a>
+</label>
+<input type="text" id="qt" value="/select" title="Request handler in solrconfig.xml.">
 
-      <fieldset class="common">
-        <legend>common</legend>
-        <div class="fieldset">
+<fieldset class="common">
+    <legend>common</legend>
+    <div class="fieldset">
 
         <label for="q">
-          q
+            q
         </label>
         <textarea name="q" id="q" title="The query string.">*:*</textarea>
 
         <label for="fq">
-          <a rel="help">fq</a>
+            <a rel="help">fq</a>
         </label>
+
         <div class="multiple">
-          <div class="row clearfix">
-            <input type="text" id="fq" name="fq" title="Filter query.">
-            <div class="buttons">
-              <a class="rem" data-action="0"><span>[-]</span></a>
-              <a class="add" data-action="1"><span>[+]</span></a>
+            <div class="row clearfix">
+                <input type="text" id="fq" name="fq" title="Filter query.">
+
+                <div class="buttons">
+                    <a class="rem" data-action="0"><span>[-]</span></a>
+                    <a class="add" data-action="1"><span>[+]</span></a>
+                </div>
             </div>
-          </div>
         </div>
 
         <label for="sort">
-          <a rel="help">sort</a>
+            <a rel="help">sort</a>
         </label>
         <input type="text" id="sort" name="sort" title="Sort field or function with asc|desc.">
 
         <label for="start">
-          <a rel="help">start</a>,
-          <a rel="help">rows</a>
+            <a rel="help">start</a>,
+            <a rel="help">rows</a>
         </label>
+
         <div class="clearfix">
-          <input type="text" name="start" id="start" placeholder="0" pattern="[0-9]+" title="Number of leading documents to skip. (Integer)">
-          <input type="text" name="rows" id="rows" placeholder="10" pattern="[0-9]+" title="Number of documents to return after 'start'. (Integer)">
+            <input type="text" name="start" id="start" placeholder="0" pattern="[0-9]+"
+                   title="Number of leading documents to skip. (Integer)">
+            <input type="text" name="rows" id="rows" placeholder="10" pattern="[0-9]+"
+                   title="Number of documents to return after 'start'. (Integer)">
         </div>
 
         <label for="fl">
-          <a rel="help">fl</a>
+            <a rel="help">fl</a>
         </label>
         <input type="text" name="fl" id="fl" value="" title="Field list, comma separated.">
 
         <label for="df">
-          <a rel="help">df</a>
+            <a rel="help">df</a>
         </label>
         <input type="text" name="df" id="df" value="" title="Default search field">
 
         <label for="custom_parameters">
-          <a rel="help">Raw Query Parameters</a>
+            <a rel="help">Raw Query Parameters</a>
         </label>
         <input type="text" id="custom_parameters" value="" placeholder="key1=val1&amp;key2=val2">
 
         <label for="wt">
-          <a rel="help">wt</a>
+            <a rel="help">wt</a>
         </label>
         <select name="wt" id="wt" title="The writer type (response format).">
-          <option>json</option>
-          <option>xml</option>
-          <option>python</option>
-          <option>ruby</option>
-          <option>php</option>
-          <option>csv</option>
+            <option>json</option>
+            <option>xml</option>
+            <option>python</option>
+            <option>ruby</option>
+            <option>php</option>
+            <option>csv</option>
         </select>
 
         <label for="indent" class="checkbox">
-          <input type="checkbox" name="indent" id="indent" value="true" title="Indent results." checked="checked">
-          <a rel="help">indent</a>
+            <input type="checkbox" name="indent" id="indent" value="true" title="Indent results." checked="checked">
+            <a rel="help">indent</a>
         </label>
 
         <label for="debugQuery" class="checkbox">
-          <input type="checkbox" name="debugQuery" id="debugQuery" value="true" title="Show timing and diagnostics.">
-          <a rel="help">debugQuery</a>
+            <input type="checkbox" name="debugQuery" id="debugQuery" value="true" title="Show timing and diagnostics.">
+            <a rel="help">debugQuery</a>
         </label>
 
-        </div>
-      </fieldset>
+    </div>
+</fieldset>
 
-      <fieldset class="dismax optional">
-        <legend>
-          <label for="dismax" class="checkbox">
+<fieldset class="dismax optional">
+    <legend>
+        <label for="dismax" class="checkbox">
             <input type="checkbox" name="defType" id="dismax" value="dismax">
             dismax
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="q_alt">q.alt</label>
         <input type="text" name="q.alt" id="q_alt" title="Alternate query when 'q' is absent.">
@@ -136,21 +141,21 @@ limitations under the License.
 
         <label for="bf">bf</label>
         <input type="text" name="bf" id="bf" title="Boost function (added).">
-      
-        </div>
-      </fieldset>
 
-      <fieldset class="edismax optional">
-        <legend>
-          <label for="edismax" class="checkbox">
+    </div>
+</fieldset>
+
+<fieldset class="edismax optional">
+    <legend>
+        <label for="edismax" class="checkbox">
             <input type="checkbox" name="defType" id="edismax" value="edismax">
             <strong>e</strong>dismax
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="edismax_q_alt">q.alt</label>
-        <input type="text" name="q.alt" id="edismax_q_alt"  title="Alternate query when 'q' is absent.">
+        <input type="text" name="q.alt" id="edismax_q_alt" title="Alternate query when 'q' is absent.">
 
         <label for="edismax_qf">qf</label>
         <input type="text" name="qf" id="edismax_qf" title="Query fields with optional boosts.">
@@ -195,26 +200,27 @@ limitations under the License.
         <input type="text" name="boost" id="edismax_boost">
 
         <label for="edismax_stopwords" class="checkbox" title="remove stopwords from mandatory 'matching' component">
-          <input type="checkbox" name="stopwords" id="edismax_stopwords" value="true" checked="checked">
-          stopwords
+            <input type="checkbox" name="stopwords" id="edismax_stopwords" value="true" checked="checked">
+            stopwords
         </label>
 
         <label for="edismax_lowercaseOperators" class="checkbox" title="Enable lower-case 'and' and 'or' as operators">
-          <input type="checkbox" name="lowercaseOperators" id="edismax_lowercaseOperators" value="true" checked="checked">
-          lowercaseOperators
+            <input type="checkbox" name="lowercaseOperators" id="edismax_lowercaseOperators" value="true"
+                   checked="checked">
+            lowercaseOperators
         </label>
-      
-        </div>
-      </fieldset>
 
-      <fieldset class="hl optional">
-        <legend>
-          <label for="hl" class="checkbox">
+    </div>
+</fieldset>
+
+<fieldset class="hl optional">
+    <legend>
+        <label for="hl" class="checkbox">
             <input type="checkbox" name="hl" id="hl" value="true" title="Enable highlighting.">
             hl
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="hl_fl">hl.fl</label>
         <input type="text" name="hl.fl" id="hl_fl" value="" title="Fields to highlight on.">
@@ -226,31 +232,31 @@ limitations under the License.
         <input type="text" name="hl.simple.post" id="hl_simple_post" value="</em>">
 
         <label for="hl_requireFieldMatch" class="checkbox">
-          <input type="checkbox" name="hl.requireFieldMatch" id="hl_requireFieldMatch" value="true">
-          hl.requireFieldMatch
+            <input type="checkbox" name="hl.requireFieldMatch" id="hl_requireFieldMatch" value="true">
+            hl.requireFieldMatch
         </label>
 
         <label for="hl_usePhraseHighlighter" class="checkbox">
-          <input type="checkbox" name="hl.usePhraseHighlighter" id="hl_usePhraseHighlighter" value="true">
-          hl.usePhraseHighlighter
+            <input type="checkbox" name="hl.usePhraseHighlighter" id="hl_usePhraseHighlighter" value="true">
+            hl.usePhraseHighlighter
         </label>
 
         <label for="hl_highlightMultiTerm" class="checkbox">
-          <input type="checkbox" name="hl.highlightMultiTerm" id="hl_highlightMultiTerm" value="true">
-          hl.highlightMultiTerm
+            <input type="checkbox" name="hl.highlightMultiTerm" id="hl_highlightMultiTerm" value="true">
+            hl.highlightMultiTerm
         </label>
-      
-        </div>
-      </fieldset>
 
-      <fieldset class="facet optional">
-        <legend>
-          <label for="facet" class="checkbox">
+    </div>
+</fieldset>
+
+<fieldset class="facet optional">
+    <legend>
+        <label for="facet" class="checkbox">
             <input type="checkbox" name="facet" id="facet" value="true">
             facet
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="facet_query">facet.query</label>
         <textarea name="facet.query" id="facet_query"></textarea>
@@ -261,17 +267,17 @@ limitations under the License.
         <label for="facet_prefix">facet.prefix</label>
         <input type="text" name="facet.prefix" id="facet_prefix">
 
-        </div>
-      </fieldset>
+    </div>
+</fieldset>
 
-      <fieldset class="spatial optional">
-        <legend>
-          <label for="spatial" class="checkbox">
+<fieldset class="spatial optional">
+    <legend>
+        <label for="spatial" class="checkbox">
             <input type="checkbox" name="spatial" id="spatial" value="true">
             spatial
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="pt">pt</label>
         <input type="text" name="pt" id="pt">
@@ -281,27 +287,27 @@ limitations under the License.
 
         <label for="d">d</label>
         <input type="text" name="d" id="d">
-        
-        </div>
-      </fieldset>
 
-      <fieldset class="spellcheck optional">
-        <legend>
-          <label for="spellcheck" class="checkbox">
+    </div>
+</fieldset>
+
+<fieldset class="spellcheck optional">
+    <legend>
+        <label for="spellcheck" class="checkbox">
             <input type="checkbox" name="spellcheck" id="spellcheck" value="true">
             spellcheck
-          </label>
-        </legend>
-        <div class="fieldset">
+        </label>
+    </legend>
+    <div class="fieldset">
 
         <label for="spellcheck_build" class="checkbox">
-          <input type="checkbox" name="spellcheck.build" id="spellcheck_build" value="true">
-          spellcheck.build
+            <input type="checkbox" name="spellcheck.build" id="spellcheck_build" value="true">
+            spellcheck.build
         </label>
 
         <label for="spellcheck_reload" class="checkbox">
-          <input type="checkbox" name="spellcheck.reload" id="spellcheck_reload" value="true">
-          spellcheck.reload
+            <input type="checkbox" name="spellcheck.reload" id="spellcheck_reload" value="true">
+            spellcheck.reload
         </label>
 
         <label for="spellcheck_q">spellcheck.q</label>
@@ -314,18 +320,18 @@ limitations under the License.
         <input type="text" name="spellcheck.count" id="spellcheck_count">
 
         <label for="spellcheck_onlyMorePopular" class="checkbox">
-          <input type="checkbox" name="spellcheck.onlyMorePopular" id="spellcheck_onlyMorePopular" value="true">
-          spellcheck.onlyMorePopular
+            <input type="checkbox" name="spellcheck.onlyMorePopular" id="spellcheck_onlyMorePopular" value="true">
+            spellcheck.onlyMorePopular
         </label>
 
         <label for="spellcheck_extendedResults" class="checkbox">
-          <input type="checkbox" name="spellcheck.extendedResults" id="spellcheck_extendedResults" value="true">
-          spellcheck.extendedResults
+            <input type="checkbox" name="spellcheck.extendedResults" id="spellcheck_extendedResults" value="true">
+            spellcheck.extendedResults
         </label>
 
         <label for="spellcheck_collate" class="checkbox">
-          <input type="checkbox" name="spellcheck.collate" id="spellcheck_collate" value="true">
-          spellcheck.collate
+            <input type="checkbox" name="spellcheck.collate" id="spellcheck_collate" value="true">
+            spellcheck.collate
         </label>
 
         <label for="spellcheck_maxCollations">spellcheck.maxCollations</label>
@@ -336,26 +342,26 @@ limitations under the License.
 
         <label for="spellcheck_accuracy">spellcheck.accuracy</label>
         <input type="text" name="spellcheck.accuracy" id="spellcheck_accuracy">
-      
-      </fieldset>
+
+</fieldset>
 
 
-      <button type="submit">Execute Query</button>
+<button type="submit">Execute Query</button>
 
-    </form>
+</form>
 
-  </div>
+</div>
 
-  <div id="result">
+<div id="result">
 
     <a id="url" class="address-bar" href="#"></a>
 
     <div id="response">
 
-      <iframe src="about:blank"></iframe>
-    
+        <iframe src="about:blank"></iframe>
+
     </div>
 
-  </div>
+</div>
 
 </div>
