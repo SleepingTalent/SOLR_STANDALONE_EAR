@@ -12,6 +12,7 @@
         <module>solr-search-ejb</module>
         <module>solr-search-war</module>
         <module>solr-search-ear</module>
+        <module>solr-configuration</module>
     </modules>
     <packaging>pom</packaging>
 
