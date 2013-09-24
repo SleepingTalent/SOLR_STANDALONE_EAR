@@ -1,12 +1,12 @@
 <dataConfig>
-    <dataSource name="jdbc" driver="oracle.jdbc.OracleDriver"
+    <dataSource name="jdbc" driver="com.mysql.jdbc.Driver"
                 url="${solr.db.url}"
                 user="${solr.db.user}" password="${solr.db.password}"/>
 
     <document>
         <entity name="employee" pk="ID" query="select * from employee"
                 deltaImportQuery="select * from employee where ID='${dataimporter.delta.ID}'"
-                deltaQuery="select * from employee where lastModified &gt; to_date('${dataimporter.last_index_time}','YYYY-MM-DD HH24:MI:SS')">
+                deltaQuery="select * from employee where lastModified &gt; STR_TO_DATE('${dataimporter.last_index_time}','%d,%m,%Y')">
 
             <field column="ID" name="employee.id"/>
             <field column="FIRSTNAME" name="employee.firstname"/>

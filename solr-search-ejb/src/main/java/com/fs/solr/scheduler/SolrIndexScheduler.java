@@ -5,9 +5,12 @@ import com.fs.solr.index.ReIndexHelper;
 import org.apache.log4j.Logger;
 
 import javax.ejb.Schedule;
+import javax.ejb.Stateless;
+import javax.ejb.Timeout;
 import javax.ejb.Timer;
 import java.io.Serializable;
 
+@Stateless
 public class SolrIndexScheduler implements Serializable {
 
     public static final Logger log = Logger.getLogger(SolrIndexScheduler.class);
@@ -25,6 +28,7 @@ public class SolrIndexScheduler implements Serializable {
         }
     }
 
+    @Timeout
     public void timeout(Timer timer) {
         log.info("Timeout occurred");
     }
