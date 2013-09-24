@@ -23,6 +23,7 @@
                 <version>2.4</version>
                 <configuration>
                     <descriptor>src/main/assembly/assembly-config.xml</descriptor>
+                    <finalName>solr</finalName>
                 </configuration>
                 <executions>
                     <execution>
