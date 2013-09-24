@@ -22,6 +22,7 @@ Add the following to Jboss Stand Alone XML
 	<property name="solr.data.dir" value="C:/solr/employees/data" />
 	<property name="solr.server.url" value="http://localhost:8181/solr" />
 	<property name="solr.solr.home" value="C:/solr" />
+	<property name="solr.db.url" value="dbUrl" />
 	<property name="solr.db.user" value="user" />
 	<property name="solr.db.password" value="password" />
 </system-properties>
